@@ -18,7 +18,7 @@ class LargeScreen extends StatelessWidget {
         Expanded(
           flex: 5,
           child: Container(
-              decoration: BoxDecoration(
+            decoration: BoxDecoration(
               gradient: kPrimaryGradient,
             ),
           ),

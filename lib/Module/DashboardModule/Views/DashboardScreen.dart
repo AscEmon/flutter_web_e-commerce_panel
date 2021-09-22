@@ -6,11 +6,12 @@ import 'package:futter_web_dashboard/GlobalWidget/GlobalWidget.dart';
 
 class DashBoardScreen extends ResponsivenessWidget {
   DashBoardScreen({Key? key}) : super(largeScreen: Container());
+   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: GlobalWidget.customAppBar(),
+      appBar: GlobalWidget.customAppBar(context,scaffoldKey),
       body: ResponsivenessWidget(
           largeScreen: LargeScreen(), smallScreen: SmallScreen()),
     );

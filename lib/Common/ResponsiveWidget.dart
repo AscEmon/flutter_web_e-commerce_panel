@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:futter_web_dashboard/Util/Constant.dart';
+import 'package:get/get.dart';
 
 class ResponsivenessWidget extends StatelessWidget {
   const ResponsivenessWidget(
@@ -13,6 +14,19 @@ class ResponsivenessWidget extends StatelessWidget {
   final Widget? mediumScreen;
   final Widget? smallScreen;
   final Widget? customScreen;
+
+  static bool isSmallScreen(BuildContext context) {
+    return Get.width < mediumScreenSize;
+  }
+
+  static bool isMediumScreen(BuildContext context) {
+    return Get.width >= mediumScreenSize &&
+        Get.width < largeScreenSize;
+  }
+
+  static bool isLargeScreen(BuildContext context) {
+    return Get.width > largeScreenSize;
+  }
 
   @override
   Widget build(BuildContext context) {
