@@ -4,14 +4,16 @@ import 'package:futter_web_dashboard/Module/DashboardModule/Views/Components/Lar
 import 'package:futter_web_dashboard/Module/DashboardModule/Views/Components/SmallScreen.dart';
 import 'package:futter_web_dashboard/GlobalWidget/GlobalWidget.dart';
 
-class DashBoardScreen extends ResponsivenessWidget {
-  DashBoardScreen({Key? key}) : super(largeScreen: Container());
-   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
+class DashBoardScreen extends StatelessWidget {
+  final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: GlobalWidget.customAppBar(context,scaffoldKey),
+      key: scaffoldKey,
+      extendBodyBehindAppBar: true,
+      appBar: GlobalWidget.topNavigationBar(context, scaffoldKey),
+      drawer: Drawer(),
       body: ResponsivenessWidget(
           largeScreen: LargeScreen(), smallScreen: SmallScreen()),
     );

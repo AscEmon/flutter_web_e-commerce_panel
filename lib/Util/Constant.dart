@@ -11,7 +11,7 @@ const kBackgroundColor = Color(0xFFFFFFFF);
 
 
 const kPrimaryGradient = LinearGradient(
-  colors: [Color(0xff1e5262), Color(0xff102c35)],
+  colors: [Color(0xff1e5262), Color(0xff1A2373)],
   begin: Alignment.centerLeft,
   end: Alignment.centerRight,
 );

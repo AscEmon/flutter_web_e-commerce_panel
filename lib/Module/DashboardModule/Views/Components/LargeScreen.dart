@@ -10,17 +10,13 @@ class LargeScreen extends StatelessWidget {
       children: [
         Expanded(
           child: Container(
-            decoration: BoxDecoration(
-              gradient: kPrimaryGradient,
-            ),
+            decoration: BoxDecoration(gradient: kPrimaryGradient),
           ),
         ),
         Expanded(
           flex: 5,
           child: Container(
-            decoration: BoxDecoration(
-              gradient: kPrimaryGradient,
-            ),
+            decoration: BoxDecoration(color: Colors.pinkAccent[50]),
           ),
         )
       ],
